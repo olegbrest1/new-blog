@@ -17,8 +17,8 @@
     <% if user_signed_in? %>
       <%= button_to 'Log out', destroy_user_session_url, method: :delete %>
     <% else %>
-      <%= link_to 'Sign in', new_user_session_url %>
-      <%= link_to 'Sign up', new_user_registration_url %>
+      <%= link_to 'Войти', new_user_session_url %>
+      <%= link_to 'Зарегистрироваться', new_user_registration_url %>
     <% end %>
 
     <%= yield %>

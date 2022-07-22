@@ -23,6 +23,12 @@ gem "turbo-rails"
 
 gem "devise"
 
+gem "jquery-rails"
+
+gem "bootstrap"
+
+gem "sassc-rails"
+
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
