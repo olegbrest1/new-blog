@@ -3,15 +3,15 @@
 <p><%= @article.body %></p>
 
 <ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= button_to "Destroy", article_path(@article), method: :delete, data: {
+  <li><%= link_to "Редактировать", edit_article_path(@article) %></li>
+  <li><%= button_to "Удалить", article_path(@article), method: :delete, data: {
                     
                   confirm: "Are you sure?"
                   } %></li>
 </ul>
 
-<h2>Comments</h2>
+<h2>Комментарии</h2>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h2>Добавить комментарий:</h2>
 <%= render 'comments/form' %>
