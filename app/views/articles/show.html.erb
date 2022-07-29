@@ -1,13 +1,17 @@
-<h1><%= @article.title %></h1>
+<h2><%= @article.title %></h2>
 
 <p><%= @article.body %></p>
 
+<h4><%= "Автор статьи" %></h4>
+<p><%= @article.user.email %></p>
+
 <ul>
+<% if @article.user == current_user%>
   <li><%= link_to "Редактировать", edit_article_path(@article) %></li>
   <li><%= button_to "Удалить", article_path(@article), method: :delete, data: {
-                    
-                  confirm: "Are you sure?"
+                  confirm: "Are you sure?" 
                   } %></li>
+                  <% end %>
 </ul>
 
 <h2>Комментарии</h2>
